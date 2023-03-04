@@ -4,6 +4,7 @@ const second = document.querySelector('.second');
 const month = document.querySelector('.month');
 const day = document.querySelector('.day');
 const date = document.querySelector('.date');
+const year = document.querySelector('.year');
 const listMonth = [
     'January',
     'February',
@@ -28,6 +29,7 @@ setInterval(() => {
     minute.innerText = getMinute;
     second.innerText = getSecond;
     month.innerText = listMonth[Day.getMonth()];
-    day.innerText = listDay[Day.getDay()];
+    day.innerText = listDay[Day.getDay()-1];
     date.innerText = Day.getDate();
+    year.innerText = Day.getFullYear();
 }, 500);
